@@ -14,4 +14,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+      # pytest is a test-only tool: requirements.txt stays empty on
+      # purpose (the runtime is standard-library only), so install
+      # the runner explicitly here.
+      - run: pip install pytest
       - run: python -m pytest

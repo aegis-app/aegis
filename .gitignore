@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Personal configuration and runtime data (never commit:
+# config.json may hold the A2S token and webhook URLs)
+config.json
+data/
+dist/
+
+# OS / editor
+.DS_Store

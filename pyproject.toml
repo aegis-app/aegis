@@ -1,0 +1,28 @@
+# ============================================================
+# 📦 AEGIS (Python) — project metadata
+# ============================================================
+# Runtime dependencies: none. AEGIS runs on the Python 3.11+
+# standard library only, so there is nothing to pip install.
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegis"
+version = "1.0.0"
+description = "AEGIS — Autonomous Emergency Guard & Information System (earthquake / tsunami / weather assistant fed by A.A.S)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "i-mabu" }]
+keywords = ["disaster-prevention", "earthquake", "tsunami", "eew", "jma"]
+
+[project.scripts]
+aegis = "aegis.cli:main"
+
+[tool.setuptools]
+packages = ["aegis"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
